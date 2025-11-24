@@ -1,0 +1,76 @@
+{
+  "[java]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.formatDocument": "never",
+    "source.organizeImports": "never",
+    "source.removeUnusedImports": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.rulers": [80],
+  "files.associations": {
+    ".editorconfig": "ini",
+    "*.yml.template": "yaml",
+    "gradlew": "shellscript",
+    "HEADER": "plaintext",
+    "VERSION": "plaintext"
+  },
+  "gradle.nestedProjects": true,
+  "gradle.allowParallelRun": true,
+  "java.autobuild.enabled": false,
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.gradle.buildServer.enabled": "off",
+  "java.import.generatesMetadataFilesAtProjectRoot": false,
+  "java.import.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.inlayHints.parameterNames.enabled": "none",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms2G -Xlog:disable",
+  "java.saveActions.cleanup": true,
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.compile.nullAnalysis.nullable": ["org.jetbrains.annotations.Nullable"],
+  "java.compile.nullAnalysis.nonnull": ["org.jetbrains.annotations.NotNull"],
+  "java.completion.favoriteStaticMembers": ["java.util.Objects.requireNonNull"],
+  "java.completion.filteredTypes": [
+    "com.oracle.*",
+    "com.sun.*",
+    "java.awt.*",
+    "java.util.concurrent.ForkJoinPool.*",
+    "java.util.logging.*",
+    "javax.*",
+    "jdk.*",
+    "org.apache.logging.*",
+    "org.checkerframework.*",
+    "org.jspecify.*",
+    "sun.*",
+
+    "!java.awt.image.*",
+    "*internal*"
+  ],
+  "java.completion.guessMethodArguments": "off",
+  "java.cleanup.actions": [
+    "addDeprecated",
+    "addFinalModifier",
+    "addOverride",
+    "redundantModifiers",
+    "redundantSuperCall",
+    "renameFileToType"
+  ],
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "prettier.requireConfig": true,
+  "search.exclude": {
+    "**./cache": true,
+    "**/.gradle": true,
+    "**/.husky/_": true,
+    "**/.pnp.*": true,
+    "**/.yarn": true,
+    "**/*.lock": true,
+    "**/build": true,
+    "**/gradlew.bat": true,
+    "**/gradlew": true,
+    "**/node_modules": true
+  }
+}

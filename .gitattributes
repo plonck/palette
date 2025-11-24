@@ -1,0 +1,45 @@
+*               text=auto
+.editorconfig   text
+.env            text
+.gitattributes  text
+.pnp.*          binary
+*.*ignore       text
+*.bat           text eol=crlf
+*.cjs           text linguist-vendored
+*.class         binary
+*.Dockerfile    text
+*.Dockerfile    text
+*.gradle        text diff=java
+*.gz            binary
+*.jar           binary
+*.java          text diff=java
+*.jks           binary
+*.jpg           binary
+*.js            text linguist-vendored
+*.json          text
+*.kt            text diff=kotlin
+*.kts           text diff=kotlin
+*.lock          text
+*.md            text diff=markdown
+*.mjs           text linguist-vendored
+*.png           binary
+*.properties    text
+*.sh            text eol=lf
+*.svg           text
+*.tar           binary
+*.template      text
+*.toml          text
+*.webp          binary
+*.xml           text
+*.xsd           text linguist-documentation
+*.yaml          text
+*.yml           text
+*.zip           binary
+/.husky/*       text eol=lf
+/gradlew        text eol=lf
+AUTHORS         text
+Dockerfile      text
+HEADER          text
+LICENSE         text
+Makefile        text eol=lf
+VERSION         text

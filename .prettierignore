@@ -1,0 +1,24 @@
+*
+!**/
+
+!*.cjs
+!*.java
+!*.js
+!*.json
+# !*.md
+!*.mjs
+# !*.toml
+# !*.xml
+!*.xsd
+!*.yaml
+!*.yml
+
+/.gradle/
+/.husky/_/
+/.idea/
+/.pnp.*
+/.cache/
+/.yarn/
+/build/
+/gradle/wrapper/
+/node_modules/
