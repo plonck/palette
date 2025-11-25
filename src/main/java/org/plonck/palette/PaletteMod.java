@@ -39,7 +39,7 @@ public class PaletteMod implements ModInitializer {
     final int tasks = 2;
     final ExecutorService executor = Executors.newFixedThreadPool(
       tasks,
-      new NamedThreadFactory("palette-thread-")
+      new NamedThreadFactory("palette-task-")
     );
     final CountDownLatch latch = new CountDownLatch(tasks);
 
