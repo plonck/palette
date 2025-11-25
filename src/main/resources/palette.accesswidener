@@ -1,5 +1,5 @@
 
-accessWidener v2 named
-accessible class net/minecraft/world/level/material/MapColor
-accessible field net/minecraft/world/level/material/MapColor MATERIAL_COLORS [Lnet/minecraft/world/level/material/MapColor;
-accessible field net/minecraft/world/level/material/MapColor$Brightness VALUES [Lnet/minecraft/world/level/material/MapColor$Brightness;
+classTweaker v1 named
+accessible  class   net/minecraft/world/level/material/MapColor
+accessible  field   net/minecraft/world/level/material/MapColor  MATERIAL_COLORS  [Lnet/minecraft/world/level/material/MapColor;
+accessible  field   net/minecraft/world/level/material/MapColor$Brightness  VALUES  [Lnet/minecraft/world/level/material/MapColor$Brightness;
