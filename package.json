@@ -1,5 +1,5 @@
 {
-  "name": "@plonck/color-mapper",
+  "name": "@plonck/palette",
   "packageManager": "yarn@4.12.0",
   "private": true,
   "devDependencies": {

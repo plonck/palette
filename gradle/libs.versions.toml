@@ -1,5 +1,11 @@
 [versions]
-loom = "1.13-SNAPSHOT"
+fabric-loader = "0.18.1"
+fabric-loom = "1.13-SNAPSHOT"
+minecraft = "1.21.10"
+
+[libraries]
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 
 [plugins]
-loom = { id = "fabric-loom", version.ref = "loom" }
+fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }

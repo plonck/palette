@@ -1,1 +1,1 @@
-# color-mapper
+# palette
