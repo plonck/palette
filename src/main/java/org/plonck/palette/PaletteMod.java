@@ -1,9 +1,116 @@
 package org.plonck.palette;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.core.DefaultedRegistry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.MapColor.Brightness;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PaletteMod implements ModInitializer {
 
+  private static final Path PATH_COLORS = Path.of("colors.csv");
+  private static final Path PATH_BLOCKS = Path.of("blocks.csv");
+
+  private final Logger logger = LoggerFactory.getLogger("Palette");
+
+  public PaletteMod() {}
+
   @Override
-  public void onInitialize() {}
+  public void onInitialize() {
+    logger.info("Starting palette generation...");
+
+    try {
+      generateColors();
+      generateBlocks();
+
+      logger.info("Done generating palette");
+      System.exit(0);
+    } catch (final Exception e) {
+      logger.error("Failed to generate palette", e);
+      System.exit(1);
+    }
+  }
+
+  private void generateColors() throws IOException {
+    final List<String> lines = new ArrayList<>(
+      MapColor.MATERIAL_COLORS.length * 4
+    );
+
+    for (int i = 0; i < MapColor.MATERIAL_COLORS.length; i++) {
+      final MapColor base = MapColor.MATERIAL_COLORS[i];
+      if (base == null || base.id == 0) continue;
+
+      // Compute each shade variant of the base color.
+      for (final Brightness variant : Brightness.VALUES) {
+        final int rgba = base.calculateARGBColor(variant);
+
+        // Ignore fully transparent colors.
+        if (((rgba >> 24) & 0xFF) == 0) continue; // A
+
+        lines.add(
+          new StringBuilder()
+            .append(base.id * 4 + variant.id)
+            .append(',')
+            .append(base.id)
+            .append(',')
+            .append(variant.id)
+            .append(',')
+            .append((rgba >> 16) & 0xFF) // R
+            .append(',')
+            .append((rgba >> 8) & 0xFF) // G
+            .append(',')
+            .append(rgba & 0xFF) // B
+            .toString()
+        );
+      }
+    }
+
+    save(PATH_COLORS, lines);
+  }
+
+  private void generateBlocks() throws IOException {
+    final DefaultedRegistry<Block> registry = BuiltInRegistries.BLOCK;
+    final List<String> lines = new ArrayList<>(registry.size());
+    int skipped = 0;
+    for (final Block block : registry) {
+      final ResourceLocation key = registry.getKey(block);
+      MapColor color = null;
+      try {
+        color = block.defaultBlockState().getMapColor(null, null);
+      } catch (final Exception ignored) {
+        // Some blocks require world context to determine their color.
+        skipped++;
+      }
+      if (color != null) {
+        lines.add(key.toString() + "," + Integer.toUnsignedString(color.id));
+      }
+    }
+    if (skipped > 0) {
+      logger.warn("Skipped " + skipped + " blocks");
+    }
+    save(PATH_BLOCKS, lines);
+  }
+
+  private void save(final Path path, final List<String> lines)
+    throws IOException {
+    try (final BufferedWriter writer = Files.newBufferedWriter(path)) {
+      for (final String line : lines) {
+        writer.write(line);
+        writer.newLine();
+      }
+    }
+    logger.info(
+      "Saved " + lines.size() + " entries to " + path.toAbsolutePath()
+    );
+  }
 }
