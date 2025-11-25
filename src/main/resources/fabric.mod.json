@@ -3,7 +3,7 @@
   "id": "palette",
   "version": "${version}",
   "name": "Palette",
-  "description": "Generates a table of block types to map colors",
+  "description": "Generates tables for matching blocks to map colors",
   "license": "APACHE-2.0",
   "environment": "server",
   "accessWidener": "palette.accesswidener",
