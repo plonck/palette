@@ -6,6 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.DefaultedRegistry;
@@ -30,14 +34,45 @@ public class PaletteMod implements ModInitializer {
   public void onInitialize() {
     logger.info("Starting palette generation...");
 
-    try {
-      generateColors();
-      generateBlocks();
+    final int tasks = 2;
+    final ExecutorService executor = Executors.newFixedThreadPool(tasks);
+    final CountDownLatch latch = new CountDownLatch(tasks);
 
+    executor.execute(() -> {
+      try {
+        generateColors();
+      } catch (final Exception e) {
+        logger.error("Failed to generate colors", e);
+      } finally {
+        latch.countDown();
+      }
+    });
+
+    executor.execute(() -> {
+      try {
+        generateBlocks();
+      } catch (final Exception e) {
+        logger.error("Failed to generate blocks", e);
+      } finally {
+        latch.countDown();
+      }
+    });
+
+    try {
+      if (!latch.await(30, TimeUnit.SECONDS)) {
+        logger.error("Parallel generation timed out.");
+        System.exit(1);
+      }
+
+      executor.shutdown();
       logger.info("Done generating palette");
       System.exit(0);
+    } catch (final InterruptedException e) {
+      Thread.currentThread().interrupt();
+      logger.error("Generation thread interrupted", e);
+      System.exit(1);
     } catch (final Exception e) {
-      logger.error("Failed to generate palette", e);
+      logger.error("Unexpected error after generation tasks completed", e);
       System.exit(1);
     }
   }
