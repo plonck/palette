@@ -1,0 +1,55 @@
+name: Release Server Data
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Extract Minecraft Version via Gradle
+        id: get_version
+        run: |
+          VERSION=$(./gradlew --quiet showMinecraftVersion)
+          echo "minecraft_version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Run Server Data Generation Script
+        run: |
+          set -eu
+          mkdir -p run
+          echo 'eula=true' > run/eula.txt
+          ./gradlew --console plain --no-daemon runServer
+
+      - name: Upload colors.csv as Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./run/colors.csv
+          asset_name: colors-${{ steps.get_version.outputs.minecraft_version }}.csv
+          asset_content_type: text/csv
+
+      - name: Upload blocks.csv as Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./run/blocks.csv
+          asset_name: blocks-${{ steps.get_version.outputs.minecraft_version }}.csv
+          asset_content_type: text/csv
