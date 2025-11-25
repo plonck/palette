@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "org.plonck.palette",
+  "id": "palette",
   "version": "${version}",
   "name": "Palette",
   "description": "Generates a table of block types to map colors",
   "license": "APACHE-2.0",
   "environment": "server",
-  "accessWidener" : "palette.accesswidener",
+  "accessWidener": "palette.accesswidener",
   "entrypoints": {
     "main": ["org.plonck.palette.PaletteMod"]
   },
