@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.BlockPos;
@@ -35,10 +36,8 @@ public final class PaletteMod implements ModInitializer {
     logger.info("Starting palette generation...");
 
     final CountDownLatch latch = new CountDownLatch(2);
-    final ExecutorService executor = Executors.newFixedThreadPool(
-      (int) latch.getCount(),
-      new NamedThreadFactory("palette-task-")
-    );
+    final ThreadFactory factory = new NamedThreadFactory("palette-task-");
+    final ExecutorService executor = Executors.newFixedThreadPool(2, factory);
 
     executor.execute(() -> {
       logger.info("Generating color table...");
