@@ -9,3 +9,4 @@ echo 'eula=true' > run/eula.txt
 
 mkdir -p build/dist
 cp run/colors.csv build/dist/
+cp run/blocks.csv build/dist/
