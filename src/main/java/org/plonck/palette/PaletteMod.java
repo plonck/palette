@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.DefaultedRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -86,9 +87,14 @@ public class PaletteMod implements ModInitializer {
       final ResourceLocation key = registry.getKey(block);
       MapColor color = null;
       try {
-        color = block.defaultBlockState().getMapColor(null, null);
-      } catch (final Exception ignored) {
-        // Some blocks require world context to determine their color.
+        color = block
+          .defaultBlockState()
+          .getMapColor(FakeBlockGetter.INSTANCE, BlockPos.ZERO);
+      } catch (final Exception e) {
+        // Faking the world context did not suffice to determine the color.
+        if (logger.isDebugEnabled()) {
+          logger.debug("Skipping block {}", key, e);
+        }
         skipped++;
       }
       if (color != null) {
