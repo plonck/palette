@@ -4,6 +4,7 @@
 .gitattributes  text
 .pnp.*          binary
 *.*ignore       text
+*.accesswidener text
 *.bat           text eol=crlf
 *.cjs           text linguist-vendored
 *.class         binary
