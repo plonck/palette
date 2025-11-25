@@ -34,12 +34,11 @@ public final class PaletteMod implements ModInitializer {
   public void onInitialize() {
     logger.info("Starting palette generation...");
 
-    final int tasks = 2;
+    final CountDownLatch latch = new CountDownLatch(2);
     final ExecutorService executor = Executors.newFixedThreadPool(
-      tasks,
+      (int) latch.getCount(),
       new NamedThreadFactory("palette-task-")
     );
-    final CountDownLatch latch = new CountDownLatch(tasks);
 
     executor.execute(() -> {
       logger.info("Generating color table...");
