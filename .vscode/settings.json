@@ -11,9 +11,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "files.associations": {
     ".editorconfig": "ini",
     "*.yml.template": "yaml",
@@ -33,15 +31,9 @@
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms2G -Xlog:disable",
   "java.saveActions.cleanup": true,
   "java.compile.nullAnalysis.mode": "disabled",
-  "java.compile.nullAnalysis.nullable": [
-    "org.jetbrains.annotations.Nullable"
-  ],
-  "java.compile.nullAnalysis.nonnull": [
-    "org.jetbrains.annotations.NotNull"
-  ],
-  "java.completion.favoriteStaticMembers": [
-    "java.util.Objects.requireNonNull"
-  ],
+  "java.compile.nullAnalysis.nullable": ["org.jetbrains.annotations.Nullable"],
+  "java.compile.nullAnalysis.nonnull": ["org.jetbrains.annotations.NotNull"],
+  "java.completion.favoriteStaticMembers": ["java.util.Objects.requireNonNull"],
   "java.completion.filteredTypes": [
     "com.oracle.*",
     "com.sun.*",
@@ -66,8 +58,10 @@
     "redundantSuperCall",
     "renameFileToType"
   ],
+  "prettier.configPath": "prettier.config.cjs",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "prettier.requireConfig": true,
+  "prettier.resolveGlobalModules": false,
   "search.exclude": {
     "**./cache": true,
     "**/.gradle": true,
