@@ -95,9 +95,7 @@ public class PaletteMod implements ModInitializer {
 
         lines.add(
           new StringBuilder()
-            .append(base.id)
-            .append(',')
-            .append(variant.id)
+            .append((base.id * 4) + variant.id)
             .append(',')
             .append((rgba >> 16) & 0xFF) // R
             .append(',')
