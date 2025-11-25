@@ -34,3 +34,9 @@ tasks.processResources {
     expand(props)
   }
 }
+
+tasks.register("showMinecraftVersion") {
+  doLast {
+    println(libs.versions.minecraft.get())
+  }
+}
