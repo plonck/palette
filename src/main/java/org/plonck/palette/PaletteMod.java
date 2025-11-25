@@ -1,3 +1,9 @@
 package org.plonck.palette;
 
-public class PaletteMod {}
+import net.fabricmc.api.ModInitializer;
+
+public class PaletteMod implements ModInitializer {
+
+  @Override
+  public void onInitialize() {}
+}
