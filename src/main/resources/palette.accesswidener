@@ -1,5 +1,5 @@
-
 classTweaker v1 named
+# https://wiki.fabricmc.net/tutorial:accesswidening
 accessible  class   net/minecraft/world/level/material/MapColor
 accessible  field   net/minecraft/world/level/material/MapColor  MATERIAL_COLORS  [Lnet/minecraft/world/level/material/MapColor;
 accessible  field   net/minecraft/world/level/material/MapColor$Brightness  VALUES  [Lnet/minecraft/world/level/material/MapColor$Brightness;
