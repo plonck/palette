@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.DefaultedRegistry;
@@ -35,7 +37,10 @@ public class PaletteMod implements ModInitializer {
     logger.info("Starting palette generation...");
 
     final int tasks = 2;
-    final ExecutorService executor = Executors.newFixedThreadPool(tasks);
+    final ExecutorService executor = Executors.newFixedThreadPool(
+      tasks,
+      new NamedThreadFactory("palette-thread-")
+    );
     final CountDownLatch latch = new CountDownLatch(tasks);
 
     executor.execute(() -> {
@@ -151,5 +156,22 @@ public class PaletteMod implements ModInitializer {
     logger.info(
       "Saved " + lines.size() + " entries to " + path.toAbsolutePath()
     );
+  }
+
+  private static final class NamedThreadFactory implements ThreadFactory {
+
+    private final String prefix;
+    private final AtomicInteger id = new AtomicInteger(1);
+
+    NamedThreadFactory(final String prefix) {
+      this.prefix = prefix;
+    }
+
+    @Override
+    public Thread newThread(final Runnable runnable) {
+      final Thread thread = new Thread(runnable, prefix + id.getAndIncrement());
+      thread.setDaemon(true);
+      return thread;
+    }
   }
 }
