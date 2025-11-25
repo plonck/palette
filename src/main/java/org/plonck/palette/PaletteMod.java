@@ -23,7 +23,7 @@ import net.minecraft.world.level.material.MapColor.Brightness;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PaletteMod implements ModInitializer {
+public final class PaletteMod implements ModInitializer {
 
   private static final Path PATH_COLORS = Path.of("colors.csv");
   private static final Path PATH_BLOCKS = Path.of("blocks.csv");
