@@ -39,20 +39,22 @@ public class PaletteMod implements ModInitializer {
     final CountDownLatch latch = new CountDownLatch(tasks);
 
     executor.execute(() -> {
+      logger.info("Generating color table...");
       try {
         generateColors();
       } catch (final Exception e) {
-        logger.error("Failed to generate colors", e);
+        logger.error("Failed to generate color table", e);
       } finally {
         latch.countDown();
       }
     });
 
     executor.execute(() -> {
+      logger.info("Generating block table...");
       try {
         generateBlocks();
       } catch (final Exception e) {
-        logger.error("Failed to generate blocks", e);
+        logger.error("Failed to generate block table", e);
       } finally {
         latch.countDown();
       }
