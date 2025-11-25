@@ -11,6 +11,12 @@ dependencies {
   modImplementation(libs.fabric.loader)
 }
 
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(25)
+  }
+}
+
 loom {
   accessWidenerPath = file("src/main/resources/palette.accesswidener")
 }
