@@ -11,7 +11,7 @@ const RAW_RUNTIME_STATE =
   ],\
   "dependencyTreeRoots": [\
     {\
-      "name": "@plonck/color-mapper",\
+      "name": "@plonck/palette",\
       "reference": "workspace:."\
     }\
   ],\
@@ -19,7 +19,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "pnpZipBackend": "libzip",\
   "fallbackExclusionList": [\
-    ["@plonck/color-mapper", ["workspace:."]]\
+    ["@plonck/palette", ["workspace:."]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -30,11 +30,11 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
           ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@plonck/color-mapper", "workspace:."],\
+          ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
           ["prettier", "npm:3.6.2"],\
-          ["prettier-plugin-java", "virtual:3cbc6cbb4fd7e94bb3505db9e473e06328321267f35e967b011873aab8450bf786da8d2dd4e6763880fca8000f0e485c5a670e0ef692fbc27a8e44c9109d3c44#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -319,17 +319,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@plonck/color-mapper", [\
+    ["@plonck/palette", [\
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
           ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@plonck/color-mapper", "workspace:."],\
+          ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
           ["prettier", "npm:3.6.2"],\
-          ["prettier-plugin-java", "virtual:3cbc6cbb4fd7e94bb3505db9e473e06328321267f35e967b011873aab8450bf786da8d2dd4e6763880fca8000f0e485c5a670e0ef692fbc27a8e44c9109d3c44#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1304,19 +1304,19 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["prettier-plugin-java", [\
       ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-5a99f97a0c/node_modules/prettier-plugin-java/",\
+        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-43fdec574c/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["prettier-plugin-java", "npm:2.7.7"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:3cbc6cbb4fd7e94bb3505db9e473e06328321267f35e967b011873aab8450bf786da8d2dd4e6763880fca8000f0e485c5a670e0ef692fbc27a8e44c9109d3c44#npm:2.7.7", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-5a99f97a0c/node_modules/prettier-plugin-java/",\
+      ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7", {\
+        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-43fdec574c/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["@types/prettier", null],\
           ["java-parser", "npm:3.0.1"],\
           ["prettier", "npm:3.6.2"],\
-          ["prettier-plugin-java", "virtual:3cbc6cbb4fd7e94bb3505db9e473e06328321267f35e967b011873aab8450bf786da8d2dd4e6763880fca8000f0e485c5a670e0ef692fbc27a8e44c9109d3c44#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "packagePeers": [\
           "@types/prettier",\

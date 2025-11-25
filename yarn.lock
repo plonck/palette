@@ -256,9 +256,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plonck/color-mapper@workspace:.":
+"@plonck/palette@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@plonck/color-mapper@workspace:."
+  resolution: "@plonck/palette@workspace:."
   dependencies:
     "@commitlint/cli": "npm:20.1.0"
     "@commitlint/config-conventional": "npm:20.0.0"
