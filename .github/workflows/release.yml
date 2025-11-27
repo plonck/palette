@@ -39,8 +39,8 @@ jobs:
           tag: ${{ steps.get_version.outputs.minecraft_version }}
           name: Minecraft ${{ steps.get_version.outputs.minecraft_version }}
           body: |
-            ### 🎨 Palette Data
-            Automated export of map color data for **Minecraft ${{ steps.get_version.outputs.minecraft_version }}**.
+            ### 🎨 Palette
+            Automated export of map color data for **Minecraft ${{ steps.get_version.outputs.minecraft_version }}** Java Edition.
 
             #### 📦 Contents
             * `colors.csv`: RGB values for all map colors (including shade variants).
