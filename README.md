@@ -7,6 +7,8 @@ Palette is a tiny Fabric utility mod designed to programmatically extract **inte
 
 This tool is useful for map tool developers, pixel artists, and data enthusiasts who need accurate, version-specific color data directly from the game's code. For further information on map colors, please refer to the dedicated [Minecraft Wiki page](https://minecraft.wiki/w/Map_item_format).
 
+![Minecraft Map Item](./.github/assets/map.webp)
+
 ## Output
 
 ### `colors.csv`
