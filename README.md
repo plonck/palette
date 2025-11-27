@@ -13,7 +13,7 @@ This tool is useful for map tool developers, pixel artists, and data enthusiasts
 
 ### `colors.csv`
 
-This file contains the RGB values for every valid map color ID. It accounts for the four shading variants (brightness levels) that Minecraft applies to base map colors.
+This file contains the RGB values for every valid map color ID. It accounts for the four distinct shading variants (brightness levels) that Minecraft applies to base map colors.
 
 **Format:** `COLOR_ID,R,G,B`
 
@@ -59,16 +59,22 @@ You do not need to compile the code to get the data.
 
 1. Go to the [Releases](https://github.com/plonck/palette/releases) page.
 2. Select the version matching your target Minecraft version.
-3. Download `colors.csv` and `blocks.csv` from the **Assets** list.
+3. Expand the **Assets** dropdown.
+4. Download `colors.csv` and `blocks.csv`.
 
 ### Option B: Build Locally
 
-If you wish to compile the files locally (e.g., for a snapshot version), run the build script:
+If you wish to compile the files locally (e.g., for a snapshot version), run the build script matching your operation system:
 
 ```sh
-# Produces files in ./build/palette/
+# Linux or macOS
 ./build.sh
+
+# Windows
+.\build.bat
 ```
+
+Upon success, the output files will be located under `./build/palette/`.
 
 ## Integration Example
 
