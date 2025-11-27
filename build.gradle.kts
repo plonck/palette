@@ -50,9 +50,9 @@ tasks.register("showMinecraftVersion") {
   }
 }
 
-// configure<SpotlessExtension> {
-//   java {
-//     target("src/**/*.java")
-//     licenseHeaderFile(rootProject.file("HEADER"))
-//   }
-// }
+configure<SpotlessExtension> {
+  java {
+    target("src/**/*.java")
+    licenseHeaderFile(rootProject.file("HEADER"))
+  }
+}
