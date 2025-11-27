@@ -99,4 +99,6 @@ with open('blocks.csv', 'r') as f:
 
 ## License
 
-The source code for this project is available under the **MIT License**. You are free to use, copy, modify, and share this software.
+This project's source code is distributed under the **MIT License**. Under the terms of this license, you are granted the freedom to use, reproduce, modify, and redistribute this software and any resulting output artifacts.
+
+For full details, please view the [LICENSE](LICENSE) file.
