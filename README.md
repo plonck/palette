@@ -13,7 +13,7 @@ This tool is useful for map tool developers, pixel artists, and data enthusiasts
 
 This file contains the RGB values for every valid map color ID. It accounts for the four shading variants (brightness levels) that Minecraft applies to base map colors.
 
-**Format:** `COLOR_ID, R, G, B`
+**Format:** `COLOR_ID,R,G,B`
 
 - `COLOR_ID`: Calculated as `4 * COLOR_BASE_ID + COLOR_SHADE_ID`
 - `R`, `G`, `B`: Standard 0-255 integer values for red, green, and blue
