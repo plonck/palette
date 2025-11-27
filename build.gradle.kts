@@ -31,6 +31,8 @@ tasks.processResources {
     "version_fabricloader" to libs.versions.fabric.loader.get(),
   )
 
+  inputs.properties(props)
+
   filteringCharset = "UTF-8"
 
   filesMatching("fabric.mod.json") {
