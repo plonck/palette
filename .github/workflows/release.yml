@@ -18,7 +18,7 @@ jobs:
           java-version: '21'
 
       - name: Set up Gradle environment
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v5
 
       - name: Extract Minecraft Version via Gradle
         id: get_version
