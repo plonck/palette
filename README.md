@@ -65,7 +65,7 @@ If you wish to compile the files locally (e.g., for a snapshot version), run the
 ./build.sh
 ```
 
-### Integration Example
+## Integration Example
 
 Here is how you might load this data in Python:
 
