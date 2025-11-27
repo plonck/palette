@@ -99,4 +99,4 @@ with open('blocks.csv', 'r') as f:
 
 ## License
 
-Copyright (c) 2025 Tarik Hrnjica. Licensed under the MIT License.
+The source code for this project is available under the **MIT License**. You are free to use, copy, modify, and share this software.
