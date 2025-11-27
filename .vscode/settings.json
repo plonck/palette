@@ -16,8 +16,7 @@
     ".editorconfig": "ini",
     "*.yml.template": "yaml",
     "gradlew": "shellscript",
-    "HEADER": "plaintext",
-    "VERSION": "plaintext"
+    "HEADER": "plaintext"
   },
   "gradle.nestedProjects": true,
   "gradle.allowParallelRun": true,
@@ -31,24 +30,6 @@
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms2G -Xlog:disable",
   "java.saveActions.cleanup": true,
   "java.compile.nullAnalysis.mode": "disabled",
-  "java.compile.nullAnalysis.nullable": ["org.jetbrains.annotations.Nullable"],
-  "java.compile.nullAnalysis.nonnull": ["org.jetbrains.annotations.NotNull"],
-  "java.completion.favoriteStaticMembers": ["java.util.Objects.requireNonNull"],
-  "java.completion.filteredTypes": [
-    "com.oracle.*",
-    "com.sun.*",
-    "java.awt.*",
-    "java.util.concurrent.ForkJoinPool.*",
-    "java.util.logging.*",
-    "javax.*",
-    "jdk.*",
-    "org.apache.logging.*",
-    "org.checkerframework.*",
-    "org.jspecify.*",
-    "sun.*",
-    "!java.awt.image.*",
-    "*internal*"
-  ],
   "java.completion.guessMethodArguments": "off",
   "java.cleanup.actions": [
     "addDeprecated",
