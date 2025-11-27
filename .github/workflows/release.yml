@@ -1,4 +1,4 @@
-name: Release Server Data
+name: Release
 
 on:
   release:
@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Java 21
+      - name: Set up Java environment
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Setup Gradle
+      - name: Set up Gradle environment
         uses: gradle/actions/setup-gradle@v3
 
       - name: Extract Minecraft Version via Gradle
@@ -27,14 +27,14 @@ jobs:
           VERSION=$(./gradlew --quiet showMinecraftVersion)
           echo "minecraft_version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Run Server Data Generation Script
+      - name: Generate data files
         run: |
           set -eu
           mkdir -p run
           echo 'eula=true' > run/eula.txt
           ./gradlew --console plain --no-daemon runServer
 
-      - name: Upload colors.csv as Release Asset
+      - name: Upload colors.csv as release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
           asset_name: colors-${{ steps.get_version.outputs.minecraft_version }}.csv
           asset_content_type: text/csv
 
-      - name: Upload blocks.csv as Release Asset
+      - name: Upload blocks.csv as release asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
