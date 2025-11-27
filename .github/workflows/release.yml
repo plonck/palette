@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./run/colors.csv
+          asset_path: ./run/palette/colors.csv
           asset_name: colors-${{ steps.get_version.outputs.minecraft_version }}.csv
           asset_content_type: text/csv
 
@@ -50,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./run/blocks.csv
+          asset_path: ./run/palette/blocks.csv
           asset_name: blocks-${{ steps.get_version.outputs.minecraft_version }}.csv
           asset_content_type: text/csv

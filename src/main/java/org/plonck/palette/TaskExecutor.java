@@ -15,6 +15,8 @@ import org.slf4j.Logger;
 
 public final class TaskExecutor {
 
+  private static final Path FOLDER = Path.of("palette");
+
   private final ExecutorService executor;
   private final Collection<Task> tasks = new LinkedList<>();
   private final Logger logger;
@@ -37,10 +39,18 @@ public final class TaskExecutor {
   public int run(final int timeout) {
     checkDone();
     done = true;
+
+    try {
+      Files.createDirectories(FOLDER);
+    } catch (final IOException e) {
+      logger.error("Could not create output folder {}", FOLDER, e);
+      return 1;
+    }
+
     final CountDownLatch latch = new CountDownLatch(tasks.size());
     for (final Task task : tasks) {
       executor.execute(() -> {
-        final Path path = Path.of(task.getName() + ".csv");
+        final Path path = FOLDER.resolve(task.getName() + ".csv");
         logger.info("Generating {}", path);
         try {
           final List<String> lines = task.generate(logger);
