@@ -1,6 +1,11 @@
-FROM eclipse-temurin:21-jdk-jammy
+ARG JAVA_VERSION=21
+
+FROM eclipse-temurin:${JAVA_VERSION}-jdk-jammy
 
 WORKDIR /app
+
+ARG JAVA_VERSION
+ENV ORG_GRADLE_PROJECT_javaVersion=${JAVA_VERSION}
 
 COPY gradlew .
 COPY gradle/ gradle/
