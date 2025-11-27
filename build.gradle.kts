@@ -39,6 +39,8 @@ tasks.processResources {
 }
 
 tasks.register("showMinecraftVersion") {
+  group = "palette"
+
   doLast {
     println(libs.versions.minecraft.get())
   }
