@@ -9,3 +9,4 @@ minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 
 [plugins]
 fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }
+spotless = { id = "com.diffplug.spotless", version = "8.1.0" }
