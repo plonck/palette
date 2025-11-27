@@ -28,7 +28,7 @@ tasks.processResources {
   val props = mapOf(
     "version" to project.version,
     "version_minecraft" to libs.versions.minecraft.get(),
-    "version_fabricloader" to libs.versions.fabric.loader.get(),
+    "version_fabric_loader" to libs.versions.fabric.loader.get(),
   )
 
   inputs.properties(props)
@@ -50,9 +50,9 @@ tasks.register("showMinecraftVersion") {
   }
 }
 
-configure<SpotlessExtension> {
-  java {
-    target("src/**/*.java")
-    licenseHeaderFile(rootProject.file("HEADER"))
-  }
-}
+// configure<SpotlessExtension> {
+//   java {
+//     target("src/**/*.java")
+//     licenseHeaderFile(rootProject.file("HEADER"))
+//   }
+// }
