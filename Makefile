@@ -1,12 +1,14 @@
 IMAGE_NAME := palette-generator
 OUTPUT_DIR := $(shell pwd)/build/palette
 
+JAVA_VERSION := 21
+
 .PHONY: all build run clean
 
 all: run
 
 build:
-	docker build -t $(IMAGE_NAME) .
+	docker build --build-arg JAVA_VERSION=$(JAVA_VERSION) -t $(IMAGE_NAME) .
 
 run: build
 	mkdir -p $(OUTPUT_DIR)
