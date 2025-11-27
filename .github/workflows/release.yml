@@ -27,29 +27,20 @@ jobs:
           VERSION=$(./gradlew --quiet showMinecraftVersion)
           echo "minecraft_version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Generate data files
+      - name: Generate Data Files
         run: |
           set -eu
           mkdir -p run
           echo 'eula=true' > run/eula.txt
           ./gradlew --console plain --no-daemon runServer
 
-      - name: Upload colors.csv as release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update Release and Tag
+        uses: ncipollo/release-action@v1
         with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./run/palette/colors.csv
-          asset_name: colors-${{ steps.get_version.outputs.minecraft_version }}.csv
-          asset_content_type: text/csv
-
-      - name: Upload blocks.csv as release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./run/palette/blocks.csv
-          asset_name: blocks-${{ steps.get_version.outputs.minecraft_version }}.csv
-          asset_content_type: text/csv
+          tag: ${{ steps.get_version.outputs.minecraft_version }}
+          name: Minecraft ${{ steps.get_version.outputs.minecraft_version }}
+          allowUpdates: true
+          removeArtifacts: true
+          makeLatest: true
+          artifacts: 'run/palette/colors.csv,run/palette/blocks.csv'
+          token: ${{ secrets.GITHUB_TOKEN }}

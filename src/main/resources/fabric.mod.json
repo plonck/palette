@@ -11,7 +11,7 @@
     "main": ["org.plonck.palette.PaletteMod"]
   },
   "depends": {
-    "minecraft": "${minecraft_version}",
-    "fabricloader": ">=${fabric_loader_version}"
+    "minecraft": "${version_minecraft}",
+    "fabricloader": ">=${version_fabricloader}"
   }
 }
