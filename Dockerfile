@@ -12,12 +12,11 @@ COPY gradle/ gradle/
 RUN ./gradlew --version > /dev/null
 
 COPY build.gradle.kts settings.gradle.kts gradle.properties ./
+COPY src/ src/
 
 RUN ./gradlew --no-daemon dependencies > /dev/null
 
-COPY src/ src/
 COPY build.sh .
-
 RUN chmod +x build.sh
 
 CMD ["./build.sh"]
