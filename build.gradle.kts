@@ -29,6 +29,7 @@ tasks.processResources {
     "version" to project.version,
     "version_minecraft" to libs.versions.minecraft.get(),
     "version_fabric_loader" to libs.versions.fabric.loader.get(),
+    "version_java" to java.toolchain.languageVersion.get().asInt().toString()
   )
 
   inputs.properties(props)
