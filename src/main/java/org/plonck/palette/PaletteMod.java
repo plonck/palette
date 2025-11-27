@@ -19,9 +19,13 @@ public final class PaletteMod implements ModInitializer {
     executor.register(new ColorsTask());
     executor.register(new BlocksTask());
 
+    final long start = System.currentTimeMillis();
+
     final int status = executor.run(30);
 
-    logger.info("Finished palette generation");
+    final long end = System.currentTimeMillis();
+
+    logger.info("Finished palette generation in {} ms", end - start);
 
     System.exit(status);
   }
