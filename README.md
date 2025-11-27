@@ -48,10 +48,39 @@ minecraft:diorite,14
 
 ## Usage
 
-You do not need to compile the code to get the data. CSV files for specific Minecraft versions are automatically generated and attached to a release.
+### Option A: Download Data
 
-1. Go to the [GitHub Releases](https://github.com/plonck/palette/releases) page.
+You do not need to compile the code to get the data.
+
+1. Go to the [Releases](https://github.com/plonck/palette/releases) page.
 2. Select the version matching your target Minecraft version.
-3. Download `colors.csv` and `blocks.csv` from the *Assets* list.
+3. Download `colors.csv` and `blocks.csv` from the **Assets** list.
 
-If you do wish to compile the files locally, simply run the `build.sh` script.
+### Option B: Build Locally
+
+If you wish to compile the files locally (e.g., for a snapshot version), run the build script:
+
+```sh
+# Produces files in ./build/palette/
+./build.sh
+```
+
+### Integration Example
+
+Here is how you might load this data in Python:
+
+```py
+import csv
+
+# Load colors: { color_id: (r, g, b) }
+colors = {}
+with open('colors.csv', 'r') as f:
+    for row in csv.reader(f):
+        colors[int(row[0])] = (int(row[1]), int(row[2]), int(row[3]))
+
+# Load blocks: { block_id: base_color_id }
+blocks = {}
+with open('blocks.csv', 'r') as f:
+    for row in csv.reader(f):
+        blocks[row[0]] = int(row[1])
+```
