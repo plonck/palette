@@ -1,3 +1,5 @@
+import com.diffplug.gradle.spotless.SpotlessExtension
+
 plugins {
   alias(libs.plugins.fabric.loom)
   alias(libs.plugins.spotless)
@@ -39,5 +41,12 @@ tasks.processResources {
 tasks.register("showMinecraftVersion") {
   doLast {
     println(libs.versions.minecraft.get())
+  }
+}
+
+configure<SpotlessExtension> {
+  java {
+    target("src/**/*.java")
+    licenseHeaderFile(rootProject.file("HEADER"))
   }
 }
