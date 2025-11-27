@@ -41,8 +41,10 @@ tasks.processResources {
 tasks.register("showMinecraftVersion") {
   group = "palette"
 
+  val minecraftVersion = libs.versions.minecraft.get()
+
   doLast {
-    println(libs.versions.minecraft.get())
+    println(minecraftVersion)
   }
 }
 
