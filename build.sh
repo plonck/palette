@@ -13,7 +13,7 @@ if ! printf 'eula=true\n' > run/eula.txt; then
 fi
 
 echo "Starting Minecraft server"
-./gradlew --console plain --no-daemon clean runServer
+./gradlew --console plain --no-daemon runServer --info --stacktrace
 
 if [ $? -ne 0 ]; then
   echo "Error: Could not start server" >&2
