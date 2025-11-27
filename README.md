@@ -84,3 +84,7 @@ with open('blocks.csv', 'r') as f:
     for row in csv.reader(f):
         blocks[row[0]] = int(row[1])
 ```
+
+## License
+
+Copyright (c) 2025 Tarik Hrnjica. Licensed under the Apache License, Version 2.0.
