@@ -1,7 +1,7 @@
 # Palette
 
 [![Latest Release](https://img.shields.io/github/v/release/plonck/palette?label=Latest%20Release&style=flat-square&color=2ea44f)](https://github.com/plonck/palette/releases/latest)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 Palette is a tiny Fabric utility mod designed to programmatically extract **internal map color data** from **Minecraft Java Edition**. It generates raw CSV tables mapping block identifiers to map colors, and map color IDs to their specific RGB values.
 
@@ -99,4 +99,4 @@ with open('blocks.csv', 'r') as f:
 
 ## License
 
-Copyright (c) 2025 Tarik Hrnjica. Licensed under the Apache License, Version 2.0.
+The source code for this project is available under the **MIT License**. You are free to use, copy, modify, and share this software.
