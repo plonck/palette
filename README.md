@@ -20,7 +20,6 @@ This file contains the RGB values for every valid map color ID. It accounts for 
 - `COLOR_ID`: Calculated as `4 * COLOR_BASE_ID + COLOR_SHADE_ID`
 - `R`, `G`, `B`: Standard 0-255 integer values for red, green, and blue
 
-
 **Example:**
 
 ```
@@ -30,6 +29,8 @@ This file contains the RGB values for every valid map color ID. It accounts for 
 7,67,94,29
 ...
 ```
+
+> **Note:** Color ID `0` (transparent) is excluded from the table.
 
 ### `blocks.csv`
 
