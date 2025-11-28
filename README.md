@@ -124,6 +124,7 @@ If you are developing a Java or Kotlin application, you can automate the data re
 The following **Kotlin DSL** snippet registers a custom Gradle task that fetches specific versions of `colors.csv` and `blocks.csv` from GitHub Releases. It automatically adds these files to your project's resources source set, ensuring the data is bundled with your application when it is compiled.
 
 ```kts
+import java.net.URL
 import org.gradle.api.DefaultTask
 
 tasks.register<DefaultTask>("downloadPalette") {
@@ -151,13 +152,15 @@ tasks.register<DefaultTask>("downloadPalette") {
 
       logger.lifecycle("Downloading $sourceUrl to ${assetFile.absolutePath}")
 
-      ant.withGroovyBuilder {
-        "get"(
-          "src" to sourceUrl,
-          "dest" to assetFile,
-          "skipexisting" to "false",
-          "verbose" to "true"
-        )
+      try {
+        URL(sourceUrl).openStream().use { input ->
+          assetFile.outputStream().use { output ->
+            input.copyTo(output)
+          }
+        }
+      } catch (e: Exception) {
+        logger.error("Failed to download $sourceUrl", e)
+        throw e // Re-throw to fail the build
       }
     }
   }
