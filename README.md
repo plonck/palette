@@ -3,7 +3,7 @@
 [![Latest Release](https://img.shields.io/github/v/release/plonck/palette?label=Latest%20Release&style=flat-square&color=2ea44f)](https://github.com/plonck/palette/releases/latest)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-Palette is a tiny Fabric utility mod designed to programmatically extract **internal map color data** from **Minecraft Java Edition**. It generates raw CSV tables mapping block identifiers to map colors, and map color IDs to their specific RGB values.
+Palette is a tiny Fabric utility mod designed to programmatically extract **internal map color data** from **Minecraft Java Edition**. It generates headerless CSV tables mapping block identifiers to map colors, and map color IDs to their specific RGB values.
 
 This tool is useful for map tool developers, pixel artists, and data enthusiasts who need accurate, version-specific color data directly from the game's code. For further information on map colors, please refer to the dedicated [Minecraft Wiki page](https://minecraft.wiki/w/Map_item_format).
 
@@ -18,7 +18,7 @@ This file contains the RGB values for every valid map color ID. It accounts for 
 **Format:** `COLOR_ID,R,G,B`
 
 - `COLOR_ID`: Calculated as `4 * COLOR_BASE_ID + COLOR_SHADE_ID`
-- `R`, `G`, `B`: Standard 0-255 integer values for red, green, and blue
+- `R`, `G`, `B`: Standard 0-255 integer values of the red, green, and blue components
 
 **Example:**
 
@@ -97,8 +97,18 @@ with open('blocks.csv', 'r') as f:
         blocks[row[0]] = int(row[1])
 ```
 
+Once loaded, you can perform a lookup to find the RGB color associated with a specific block ID by first finding its base color ID and then querying the `colors` dictionary:
+
+```py
+block_id = 'minecraft:stone'
+color_id = 4 * blocks.get(block_id) + 0
+r, g, b = colors.get(color_id)
+
+print(f"The default color for {block_id} is ({r}, {g}, {b})")
+```
+
 ## License
 
-This project's source code is distributed under the **MIT License**. Under the terms of this license, you are granted the freedom to use, reproduce, modify, and redistribute this software and any resulting output artifacts.
+This project's source code is distributed under the **MIT License**. Under the terms of this license, you are granted the freedom to use, copy, modify, and share this software and any resulting output artifacts.
 
 For full details, please view the [LICENSE](LICENSE) file.
