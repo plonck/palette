@@ -121,7 +121,7 @@ print(f"The default color for {block_id} is ({r}, {g}, {b})")
 
 If you are developing a Java or Kotlin application, you can automate the data retrieval process directly within your build script.
 
-The following **Kotlin DSL** snippet registers a custom Gradle task that fetches specific versions of `colors.csv` and `blocks.csv` from GitHub Releases. It automatically adds these files to your project's resources source set, ensuring the data is bundled with your application when it is compiled.
+The following **Kotlin DSL** snippet registers a custom Gradle task that fetches specific versions of `colors.csv` and `blocks.csv` from GitHub. It automatically adds these files to your project's resources source set, ensuring the data is bundled with your application when it is compiled.
 
 ```kts
 import java.net.URL
@@ -168,6 +168,7 @@ tasks.register<DefaultTask>("downloadPalette") {
 
 sourceSets {
   main {
+    // Ensure that Gradle downloads the files before packaging the main JAR
     resources.srcDir(tasks.named("downloadPalette"))
   }
 }
