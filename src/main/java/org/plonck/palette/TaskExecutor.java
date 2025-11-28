@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 
 /**
  * Executes a collection of {@link Task} objects in parallel using a fixed-size
- * thread pool and writes their generated content to individual CSV files.
+ * thread pool and writes their exported content to individual CSV files.
  * <p>
  * Tasks can only be registered before the {@link #run} method is called.
  */

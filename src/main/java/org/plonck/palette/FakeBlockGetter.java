@@ -21,8 +21,14 @@ import net.minecraft.world.level.material.Fluids;
  */
 public final class FakeBlockGetter implements BlockGetter {
 
+  /**
+   * The singleton instance of this class.
+   */
   public static final BlockGetter INSTANCE = new FakeBlockGetter();
 
+  /**
+   * Prevent external instantiation.
+   */
   private FakeBlockGetter() {}
 
   @Override

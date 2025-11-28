@@ -16,6 +16,8 @@ import org.slf4j.Logger;
 /**
  * Generates a list of all defined Minecraft map colors along with their
  * RGB values.
+ * <p>
+ * <strong>Format:</strong> {@code color_id,r,g,b}
  */
 public final class ColorsTask implements Task {
 
