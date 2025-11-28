@@ -126,12 +126,12 @@ The following **Kotlin DSL** snippet registers a custom Gradle task that fetches
 ```kts
 import org.gradle.api.DefaultTask
 
-val minecraftVersion = "1.21.10"
-
 tasks.register<DefaultTask>("downloadPalette") {
   description = "Fetches block color tables from GitHub"
   group = "resource"
  
+  // NOTE: This assumes 'minecraft' version is declared in gradle/libs.versions.toml
+  val minecraftVersion = libs.versions.minecraft.get()
   inputs.property("release", minecraftVersion)
 
   val outputDir = layout.buildDirectory.dir("generated/resources/palette")
@@ -165,7 +165,7 @@ tasks.register<DefaultTask>("downloadPalette") {
 
 sourceSets {
   main {
-    resources.srcDir(tasks.named("downloadBlockColorResources"))
+    resources.srcDir(tasks.named("downloadPalette"))
   }
 }
 ```
