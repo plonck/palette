@@ -77,6 +77,16 @@ If you wish to compile the files locally (e.g., for a snapshot version), run the
 
 Upon success, the output files will be located under `./build/palette/`.
 
+### Option C: Build in a Container
+
+If you have a container runtime (like Docker or Podman) installed, you can execute the entire build flow in an isolated environment using the Makefile:
+
+```sh
+make build
+```
+
+The resulting data files will be copied to your host machine under `./build/palette/`.
+
 ## Integration Example
 
 Here is how you might load this data in Python:
