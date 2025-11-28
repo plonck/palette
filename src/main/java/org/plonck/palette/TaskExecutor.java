@@ -20,16 +20,35 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 
+/**
+ * Executes a collection of {@link Task} objects in parallel using a fixed-size
+ * thread pool and writes their generated content to individual CSV files.
+ * <p>
+ * Tasks can only be registered before the {@link #run} method is called.
+ */
 public final class TaskExecutor {
 
+  /**
+   * The destination folder for generated CSV files.
+   */
   private static final Path FOLDER = Path.of("palette");
 
   private final ExecutorService executor;
   private final Collection<Task> tasks = new LinkedList<>();
   private final Logger logger;
 
+  /**
+   * Flag to ensure tasks are only registered before execution starts.
+   */
   private volatile boolean done = false;
 
+  /**
+   * Constructs a new executor instance.
+   *
+   * @param concurrency the maximum number of threads to use for parallel task
+   * execution
+   * @param logger the logger to use for reporting task execution details
+   */
   public TaskExecutor(final int concurrency, final Logger logger) {
     executor = Executors.newFixedThreadPool(
       concurrency,
@@ -38,11 +57,30 @@ public final class TaskExecutor {
     this.logger = logger;
   }
 
+  /**
+   * Registers a new task to be executed.
+   *
+   * @param task the task to register
+   * @throws IllegalStateException if called after {@link #run} has been invoked
+   */
   public void register(final Task task) {
     checkDone();
     tasks.add(task);
   }
 
+  /**
+   * Executes all registered tasks in parallel, each writing its output to a CSV
+   * file in the designated folder.
+   * <p>
+   * This method blocks until all tasks have completed or the specified timeout
+   * is reached.
+   *
+   * @param timeout the maximum time (in seconds) to wait for all tasks to
+   * finish
+   * @return {@code 0} if all tasks completed successfully within the timemout,
+   * or {@code 1} otherwise (e.g., timeout, write failure, interruption)
+   * @throws IllegalStateException if called more than once
+   */
   public int run(final int timeout) {
     checkDone();
     done = true;
@@ -93,6 +131,7 @@ public final class TaskExecutor {
     }
   }
 
+  // Writes the given lines to a file, one line at a time, followed by a break.
   private void save(final Path path, final List<String> lines) {
     try (final BufferedWriter writer = Files.newBufferedWriter(path)) {
       for (final String line : lines) {

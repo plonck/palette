@@ -17,6 +17,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.MapColor;
 import org.slf4j.Logger;
 
+/**
+ * Generates a list of all registered Minecraft blocks along with their
+ * associated map color IDs.
+ */
 public final class BlocksTask implements Task {
 
   public BlocksTask() {}

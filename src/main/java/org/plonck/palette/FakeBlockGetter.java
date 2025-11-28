@@ -15,6 +15,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
+/**
+ * An immutable implementation of {@link BlockGetter} used to inject a dummy
+ * world context when querying the map color of a block's default state.
+ */
 public final class FakeBlockGetter implements BlockGetter {
 
   public static final BlockGetter INSTANCE = new FakeBlockGetter();

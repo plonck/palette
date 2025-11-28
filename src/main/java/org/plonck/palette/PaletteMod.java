@@ -11,10 +11,19 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The mod entry point that sets up and runs the palette generation tasks.
+ * <p>
+ * After execution, the application will terminate with an exit code
+ * indicating success (0) or failure (non-zero).
+ */
 public final class PaletteMod implements ModInitializer {
 
   private final Logger logger = LoggerFactory.getLogger("Palette");
 
+  /**
+   * A parameterless constructor is required by the mod loader.
+   */
   public PaletteMod() {}
 
   @Override

@@ -10,11 +10,19 @@ package org.plonck.palette;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Produces threads with a consistent naming pattern.
+ */
 public final class NamedThreadFactory implements ThreadFactory {
 
   private final String prefix;
   private final AtomicInteger id = new AtomicInteger(1);
 
+  /**
+   * Creates a new thread factory that names threads with the given prefix.
+   *
+   * @param prefix the common prefix for thread names (e.g., "worker-")
+   */
   public NamedThreadFactory(final String prefix) {
     this.prefix = prefix;
   }

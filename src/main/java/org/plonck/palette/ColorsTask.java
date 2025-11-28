@@ -13,6 +13,10 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.MapColor.Brightness;
 import org.slf4j.Logger;
 
+/**
+ * Generates a list of all defined Minecraft map colors along with their
+ * RGB values.
+ */
 public final class ColorsTask implements Task {
 
   public ColorsTask() {}
