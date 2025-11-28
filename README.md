@@ -65,7 +65,7 @@ You do not need to compile the code to get the data.
 
 ### Option B: Build Locally
 
-If you wish to compile the files locally (e.g., for a snapshot version), run the build script matching your operation system:
+If you wish to export the data locally (e.g., for a snapshot version), run the build script matching your operation system:
 
 ```sh
 # Linux or macOS
