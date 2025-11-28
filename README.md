@@ -87,7 +87,7 @@ make build
 
 The resulting data files will be copied to your host machine under `./build/palette/`.
 
-## Integration Example
+## Python Example
 
 Here is how you might load this data in Python:
 
@@ -115,6 +115,59 @@ color_id = 4 * blocks.get(block_id) + 0
 r, g, b = colors.get(color_id)
 
 print(f"The default color for {block_id} is ({r}, {g}, {b})")
+```
+
+## Gradle Integration
+
+If you are developing a Java or Kotlin application, you can automate the data retrieval process directly within your build script.
+
+The following **Kotlin DSL** snippet registers a custom Gradle task that fetches specific versions of `colors.csv` and `blocks.csv` from GitHub Releases. It automatically adds these files to your project's resources source set, ensuring the data is bundled with your application when it is compiled.
+
+```kts
+import org.gradle.api.DefaultTask
+
+val minecraftVersion = "1.21.10"
+
+tasks.register<DefaultTask>("downloadPalette") {
+  description = "Fetches block color tables from GitHub"
+  group = "resource"
+ 
+  inputs.property("release", minecraftVersion)
+
+  val outputDir = layout.buildDirectory.dir("generated/resources/palette")
+  outputs.dir(outputDir)
+
+  val releaseUrl = "https://github.com/plonck/palette/releases/download/$minecraftVersion"
+  val assetNames = listOf("colors.csv", "blocks.csv")
+
+  doLast {
+    val dir = outputDir.get().asFile
+    dir.deleteRecursively()
+    dir.mkdirs()
+
+    assetNames.forEach { assetName ->
+      val sourceUrl = "$releaseUrl/$assetName"
+      val assetFile = dir.resolve(assetName)
+
+      logger.lifecycle("Downloading $sourceUrl to ${assetFile.absolutePath}")
+
+      ant.withGroovyBuilder {
+        "get"(
+          "src" to sourceUrl,
+          "dest" to assetFile,
+          "skipexisting" to "false",
+          "verbose" to "true"
+        )
+      }
+    }
+  }
+}
+
+sourceSets {
+  main {
+    resources.srcDir(tasks.named("downloadBlockColorResources"))
+  }
+}
 ```
 
 ## License
