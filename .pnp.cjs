@@ -33,7 +33,7 @@ const RAW_RUNTIME_STATE =
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
-          ["prettier", "npm:3.7.2"],\
+          ["prettier", "npm:3.7.4"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "linkType": "SOFT"\
@@ -328,7 +328,7 @@ const RAW_RUNTIME_STATE =
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
-          ["prettier", "npm:3.7.2"],\
+          ["prettier", "npm:3.7.4"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "linkType": "SOFT"\
@@ -1294,10 +1294,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:3.7.2", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.7.2-54249b3a89/node_modules/prettier/",\
+      ["npm:3.7.4", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.7.4-78f94d4194/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:3.7.2"]\
+          ["prettier", "npm:3.7.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1315,7 +1315,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/prettier", null],\
           ["java-parser", "npm:3.0.1"],\
-          ["prettier", "npm:3.7.2"],\
+          ["prettier", "npm:3.7.4"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
         ],\
         "packagePeers": [\
