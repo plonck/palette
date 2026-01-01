@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
@@ -127,11 +127,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:20.0.0", {\
-        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.0.0-0782d41691-a0ad5dc436.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:20.3.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.3.0-9096c8057b-ab71b0dc51.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@commitlint/types", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.0"],\
+          ["@commitlint/types", "npm:20.2.0"],\
           ["conventional-changelog-conventionalcommits", "npm:7.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -317,6 +317,15 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.6.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:20.2.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-types-npm-20.2.0-8b79ed9cb5-95f51b805b.zip/node_modules/@commitlint/types/",\
+        "packageDependencies": [\
+          ["@commitlint/types", "npm:20.2.0"],\
+          ["@types/conventional-commits-parser", "npm:5.0.2"],\
+          ["chalk", "npm:5.6.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@plonck/palette", [\
@@ -324,7 +333,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
