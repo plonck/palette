@@ -82,13 +82,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:20.0.0":
-  version: 20.0.0
-  resolution: "@commitlint/config-conventional@npm:20.0.0"
+"@commitlint/config-conventional@npm:20.3.1":
+  version: 20.3.1
+  resolution: "@commitlint/config-conventional@npm:20.3.1"
   dependencies:
-    "@commitlint/types": "npm:^20.0.0"
+    "@commitlint/types": "npm:^20.3.1"
     conventional-changelog-conventionalcommits: "npm:^7.0.2"
-  checksum: 10c0/a0ad5dc436643015f9bc50fd269a0c336750e8836f73cbbf4188e1827f847a33d1a8be79fdf04b1ff7ed002833b2801bc3ec82c2aa2f587a7bd57d9a90a834f3
+  checksum: 10c0/e7ee21f0fd725ab8d97c6ac39ac8f52bdc004ad9efc44700323f2eb781db2bb624936d81d889fb0eb2ebcdc9cbc9f7223e8be90a897b32f5e2dba6cba4b3aadf
   languageName: node
   linkType: hard
 
@@ -246,16 +246,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "@commitlint/types@npm:20.0.0"
-  dependencies:
-    "@types/conventional-commits-parser": "npm:^5.0.0"
-    chalk: "npm:^5.3.0"
-  checksum: 10c0/ede28d479bae4ea94b75b77c4ec4e93e15128b046b52f55998b82fe16577e4fea40fc959be4aefda596382c1593d74936ad3cd8a75d0b61d85cea937d8a1cd8a
-  languageName: node
-  linkType: hard
-
 "@commitlint/types@npm:^20.2.0":
   version: 20.2.0
   resolution: "@commitlint/types@npm:20.2.0"
@@ -266,12 +256,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/types@npm:^20.3.1":
+  version: 20.3.1
+  resolution: "@commitlint/types@npm:20.3.1"
+  dependencies:
+    "@types/conventional-commits-parser": "npm:^5.0.0"
+    chalk: "npm:^5.3.0"
+  checksum: 10c0/b25fc5ba667416fc1b35987bd34a85ff4b484534492c53bf23eb7024686b1468bae8ab29988efef14e33c88bdd8b35b7a57d1a4a9db629f95efb827e56ba3c2a
+  languageName: node
+  linkType: hard
+
 "@plonck/palette@workspace:.":
   version: 0.0.0-use.local
   resolution: "@plonck/palette@workspace:."
   dependencies:
     "@commitlint/cli": "npm:20.3.0"
-    "@commitlint/config-conventional": "npm:20.0.0"
+    "@commitlint/config-conventional": "npm:20.3.1"
     husky: "npm:9.1.7"
     lint-staged: "npm:16.2.7"
     prettier: "npm:3.7.4"
