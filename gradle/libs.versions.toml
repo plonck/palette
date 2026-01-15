@@ -1,6 +1,6 @@
 [versions]
 fabric-loader = "0.18.1"
-fabric-loom = "1.13-SNAPSHOT"
+fabric-loom = "1.14"
 minecraft = "1.21.10"
 
 [libraries]
