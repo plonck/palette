@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
           ["prettier", "npm:3.8.0"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -329,7 +329,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
           ["prettier", "npm:3.8.0"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1303,20 +1303,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier-plugin-java", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-43fdec574c/node_modules/prettier-plugin-java/",\
+      ["npm:2.8.1", {\
+        "packageLocation": "./.yarn/cache/prettier-plugin-java-npm-2.8.1-91fb980b9a-85c8ded14a.zip/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
-          ["prettier-plugin-java", "npm:2.7.7"]\
+          ["prettier-plugin-java", "npm:2.8.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-43fdec574c/node_modules/prettier-plugin-java/",\
+      ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1", {\
+        "packageLocation": "./.yarn/__virtual__/prettier-plugin-java-virtual-bf79764f0c/0/cache/prettier-plugin-java-npm-2.8.1-91fb980b9a-85c8ded14a.zip/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["@types/prettier", null],\
           ["java-parser", "npm:3.0.1"],\
           ["prettier", "npm:3.8.0"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.7.7"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
         "packagePeers": [\
           "@types/prettier",\
