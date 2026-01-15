@@ -12,7 +12,7 @@ import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.DefaultedRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.MapColor;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ public final class BlocksTask implements Task {
     final List<String> lines = new ArrayList<>(registry.size());
     int skipped = 0;
     for (final Block block : registry) {
-      final ResourceLocation key = registry.getKey(block);
+      final Identifier key = registry.getKey(block);
       MapColor color = null;
       try {
         color = block
