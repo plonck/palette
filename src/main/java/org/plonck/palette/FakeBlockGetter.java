@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025 Tarik Hrnjica and contributors. All rights reserved.
+ * Copyright (c) 2025-2026 Tarik Hrnjica and contributors. All rights reserved.
  * This source code is licensed under the MIT License.
  *
  * For the full copyright and license information, please view the LICENSE file
