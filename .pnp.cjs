@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.3.1"],\
-          ["@commitlint/config-conventional", "npm:20.3.1"],\
+          ["@commitlint/config-conventional", "npm:20.4.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
@@ -127,12 +127,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:20.3.1", {\
-        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.3.1-943e2ce30a-e7ee21f0fd.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:20.4.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.4.0-dcc90c78cd-970c2c9fee.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:20.3.1"],\
-          ["@commitlint/types", "npm:20.3.1"],\
-          ["conventional-changelog-conventionalcommits", "npm:7.0.2"]\
+          ["@commitlint/config-conventional", "npm:20.4.0"],\
+          ["@commitlint/types", "npm:20.4.0"],\
+          ["conventional-changelog-conventionalcommits", "npm:9.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -317,6 +317,15 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.6.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:20.4.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-types-npm-20.4.0-346734c948-d469c74317.zip/node_modules/@commitlint/types/",\
+        "packageDependencies": [\
+          ["@commitlint/types", "npm:20.4.0"],\
+          ["conventional-commits-parser", "npm:6.2.1"],\
+          ["picocolors", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@plonck/palette", [\
@@ -324,7 +333,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.3.1"],\
-          ["@commitlint/config-conventional", "npm:20.3.1"],\
+          ["@commitlint/config-conventional", "npm:20.4.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.7"],\
@@ -597,11 +606,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["conventional-changelog-conventionalcommits", [\
-      ["npm:7.0.2", {\
-        "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-7.0.2-f878f86efe-3cb1eab35e.zip/node_modules/conventional-changelog-conventionalcommits/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-9.1.0-d8dfa4c13e-b1dfbb8ce5.zip/node_modules/conventional-changelog-conventionalcommits/",\
         "packageDependencies": [\
           ["compare-func", "npm:2.0.0"],\
-          ["conventional-changelog-conventionalcommits", "npm:7.0.2"]\
+          ["conventional-changelog-conventionalcommits", "npm:9.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -615,6 +624,14 @@ const RAW_RUNTIME_STATE =
           ["is-text-path", "npm:2.0.0"],\
           ["meow", "npm:12.1.1"],\
           ["split2", "npm:4.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.2.1", {\
+        "packageLocation": "./.yarn/cache/conventional-commits-parser-npm-6.2.1-737621231b-217b3fff62.zip/node_modules/conventional-commits-parser/",\
+        "packageDependencies": [\
+          ["conventional-commits-parser", "npm:6.2.1"],\
+          ["meow", "npm:13.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1162,6 +1179,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/meow-npm-12.1.1-bd7858d088-a125ca99a3.zip/node_modules/meow/",\
         "packageDependencies": [\
           ["meow", "npm:12.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:13.2.0", {\
+        "packageLocation": "./.yarn/cache/meow-npm-13.2.0-9907f89171-d5b339ae31.zip/node_modules/meow/",\
+        "packageDependencies": [\
+          ["meow", "npm:13.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
