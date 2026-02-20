@@ -1179,14 +1179,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["prettier-plugin-java", [\
       ["npm:2.8.1", {\
-        "packageLocation": "./.yarn/cache/prettier-plugin-java-npm-2.8.1-91fb980b9a-85c8ded14a.zip/node_modules/prettier-plugin-java/",\
+        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-bf79764f0c/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["prettier-plugin-java", "npm:2.8.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1", {\
-        "packageLocation": "./.yarn/__virtual__/prettier-plugin-java-virtual-bf79764f0c/0/cache/prettier-plugin-java-npm-2.8.1-91fb980b9a-85c8ded14a.zip/node_modules/prettier-plugin-java/",\
+        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-bf79764f0c/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["@types/prettier", null],\
           ["java-parser", "npm:3.0.1"],\
