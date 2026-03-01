@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:20.4.2"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.2.7"],\
+          ["lint-staged", "npm:16.3.1"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
@@ -326,7 +326,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:20.4.2"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.2.7"],\
+          ["lint-staged", "npm:16.3.1"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
@@ -526,10 +526,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["commander", [\
-      ["npm:14.0.2", {\
-        "packageLocation": "./.yarn/cache/commander-npm-14.0.2-538b84c387-245abd1349.zip/node_modules/commander/",\
+      ["npm:14.0.3", {\
+        "packageLocation": "./.yarn/cache/commander-npm-14.0.3-93ab31471d-755652564b.zip/node_modules/commander/",\
         "packageDependencies": [\
-          ["commander", "npm:14.0.2"]\
+          ["commander", "npm:14.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -938,17 +938,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.2.7", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.7-9ab2185fb2-9a677c21a8.zip/node_modules/lint-staged/",\
+      ["npm:16.3.1", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.3.1-0394a5ca17-9aed98ab75.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["commander", "npm:14.0.2"],\
-          ["lint-staged", "npm:16.2.7"],\
+          ["commander", "npm:14.0.3"],\
+          ["lint-staged", "npm:16.3.1"],\
           ["listr2", "npm:9.0.5"],\
           ["micromatch", "npm:4.0.8"],\
-          ["nano-spawn", "npm:2.0.0"],\
-          ["pidtree", "npm:0.6.0"],\
           ["string-argv", "npm:0.3.2"],\
-          ["yaml", "npm:2.8.1"]\
+          ["tinyexec", "npm:1.0.2"],\
+          ["yaml", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1099,15 +1098,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["nano-spawn", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/nano-spawn-npm-2.0.0-96abe72805-d00f9b5739.zip/node_modules/nano-spawn/",\
-        "packageDependencies": [\
-          ["nano-spawn", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["onetime", [\
       ["npm:7.0.0", {\
         "packageLocation": "./.yarn/cache/onetime-npm-7.0.0-cfdd2a579d-5cb9179d74.zip/node_modules/onetime/",\
@@ -1155,15 +1145,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/picomatch-npm-2.3.1-c782cfd986-26c02b8d06.zip/node_modules/picomatch/",\
         "packageDependencies": [\
           ["picomatch", "npm:2.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["pidtree", [\
-      ["npm:0.6.0", {\
-        "packageLocation": "./.yarn/cache/pidtree-npm-0.6.0-3d92e16117-0829ec4e92.zip/node_modules/pidtree/",\
-        "packageDependencies": [\
-          ["pidtree", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1401,10 +1382,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["yaml", [\
-      ["npm:2.8.1", {\
-        "packageLocation": "./.yarn/cache/yaml-npm-2.8.1-b364b3bec4-7c587be00d.zip/node_modules/yaml/",\
+      ["npm:2.8.2", {\
+        "packageLocation": "./.yarn/cache/yaml-npm-2.8.2-6cbf7c73c4-703e4dc1e3.zip/node_modules/yaml/",\
         "packageDependencies": [\
-          ["yaml", "npm:2.8.1"]\
+          ["yaml", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
