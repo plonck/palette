@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.4.2"],\
-          ["@commitlint/config-conventional", "npm:20.4.2"],\
+          ["@commitlint/config-conventional", "npm:20.5.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.3.1"],\
@@ -127,12 +127,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:20.4.2", {\
-        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.4.2-51e492a65d-d737b6682a.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:20.5.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.5.0-270861c198-3d5343243a.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:20.4.2"],\
-          ["@commitlint/types", "npm:20.4.0"],\
-          ["conventional-changelog-conventionalcommits", "npm:9.1.0"]\
+          ["@commitlint/config-conventional", "npm:20.5.0"],\
+          ["@commitlint/types", "npm:20.5.0"],\
+          ["conventional-changelog-conventionalcommits", "npm:9.3.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -316,6 +316,15 @@ const RAW_RUNTIME_STATE =
           ["picocolors", "npm:1.1.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:20.5.0", {\
+        "packageLocation": "./.yarn/cache/@commitlint-types-npm-20.5.0-bbc7661475-682913a179.zip/node_modules/@commitlint/types/",\
+        "packageDependencies": [\
+          ["@commitlint/types", "npm:20.5.0"],\
+          ["conventional-commits-parser", "npm:6.4.0"],\
+          ["picocolors", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@plonck/palette", [\
@@ -323,7 +332,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.4.2"],\
-          ["@commitlint/config-conventional", "npm:20.4.2"],\
+          ["@commitlint/config-conventional", "npm:20.5.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.3.1"],\
@@ -331,6 +340,15 @@ const RAW_RUNTIME_STATE =
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@simple-libs/stream-utils", [\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/@simple-libs-stream-utils-npm-1.2.0-db53dc026f-2788ac7b16.zip/node_modules/@simple-libs/stream-utils/",\
+        "packageDependencies": [\
+          ["@simple-libs/stream-utils", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["ajv", [\
@@ -556,11 +574,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["conventional-changelog-conventionalcommits", [\
-      ["npm:9.1.0", {\
-        "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-9.1.0-d8dfa4c13e-b1dfbb8ce5.zip/node_modules/conventional-changelog-conventionalcommits/",\
+      ["npm:9.3.1", {\
+        "packageLocation": "./.yarn/cache/conventional-changelog-conventionalcommits-npm-9.3.1-60d201b7bb-e3d0dfe568.zip/node_modules/conventional-changelog-conventionalcommits/",\
         "packageDependencies": [\
           ["compare-func", "npm:2.0.0"],\
-          ["conventional-changelog-conventionalcommits", "npm:9.1.0"]\
+          ["conventional-changelog-conventionalcommits", "npm:9.3.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -570,6 +588,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/conventional-commits-parser-npm-6.2.1-737621231b-217b3fff62.zip/node_modules/conventional-commits-parser/",\
         "packageDependencies": [\
           ["conventional-commits-parser", "npm:6.2.1"],\
+          ["meow", "npm:13.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.4.0", {\
+        "packageLocation": "./.yarn/cache/conventional-commits-parser-npm-6.4.0-d1e815eb03-3595b85b42.zip/node_modules/conventional-commits-parser/",\
+        "packageDependencies": [\
+          ["@simple-libs/stream-utils", "npm:1.2.0"],\
+          ["conventional-commits-parser", "npm:6.4.0"],\
           ["meow", "npm:13.2.0"]\
         ],\
         "linkType": "HARD"\
