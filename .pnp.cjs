@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:20.5.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.3.1"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
@@ -335,7 +335,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/config-conventional", "npm:20.5.0"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.3.1"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
         ],\
@@ -421,16 +421,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/array-ify-npm-1.0.0-e09a371977-75c9c072fa.zip/node_modules/array-ify/",\
         "packageDependencies": [\
           ["array-ify", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["braces", [\
-      ["npm:3.0.3", {\
-        "packageLocation": "./.yarn/cache/braces-npm-3.0.3-582c14023c-7c6dfd30c3.zip/node_modules/braces/",\
-        "packageDependencies": [\
-          ["braces", "npm:3.0.3"],\
-          ["fill-range", "npm:7.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -756,16 +746,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["fill-range", [\
-      ["npm:7.1.1", {\
-        "packageLocation": "./.yarn/cache/fill-range-npm-7.1.1-bf491486db-b75b691bbe.zip/node_modules/fill-range/",\
-        "packageDependencies": [\
-          ["fill-range", "npm:7.1.1"],\
-          ["to-regex-range", "npm:5.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["get-caller-file", [\
       ["npm:2.0.5", {\
         "packageLocation": "./.yarn/cache/get-caller-file-npm-2.0.5-80e8a86305-c6c7b60271.zip/node_modules/get-caller-file/",\
@@ -870,15 +850,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["is-number", [\
-      ["npm:7.0.0", {\
-        "packageLocation": "./.yarn/cache/is-number-npm-7.0.0-060086935c-b4686d0d30.zip/node_modules/is-number/",\
-        "packageDependencies": [\
-          ["is-number", "npm:7.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["is-obj", [\
       ["npm:2.0.0", {\
         "packageLocation": "./.yarn/cache/is-obj-npm-2.0.0-3d95e053f4-85044ed7ba.zip/node_modules/is-obj/",\
@@ -965,15 +936,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.3.1", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.3.1-0394a5ca17-9aed98ab75.zip/node_modules/lint-staged/",\
+      ["npm:16.4.0", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.4.0-bc70d40d4b-67625a49a2.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
           ["commander", "npm:14.0.3"],\
-          ["lint-staged", "npm:16.3.1"],\
+          ["lint-staged", "npm:16.4.0"],\
           ["listr2", "npm:9.0.5"],\
-          ["micromatch", "npm:4.0.8"],\
+          ["picomatch", "npm:4.0.4"],\
           ["string-argv", "npm:0.3.2"],\
-          ["tinyexec", "npm:1.0.2"],\
+          ["tinyexec", "npm:1.0.4"],\
           ["yaml", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
@@ -1096,17 +1067,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["micromatch", [\
-      ["npm:4.0.8", {\
-        "packageLocation": "./.yarn/cache/micromatch-npm-4.0.8-c9570e4aca-166fa6eb92.zip/node_modules/micromatch/",\
-        "packageDependencies": [\
-          ["braces", "npm:3.0.3"],\
-          ["micromatch", "npm:4.0.8"],\
-          ["picomatch", "npm:2.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["mimic-function", [\
       ["npm:5.0.1", {\
         "packageLocation": "./.yarn/cache/mimic-function-npm-5.0.1-5078456e31-f3d9464dd1.zip/node_modules/mimic-function/",\
@@ -1168,10 +1128,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["picomatch", [\
-      ["npm:2.3.1", {\
-        "packageLocation": "./.yarn/cache/picomatch-npm-2.3.1-c782cfd986-26c02b8d06.zip/node_modules/picomatch/",\
+      ["npm:4.0.4", {\
+        "packageLocation": "./.yarn/cache/picomatch-npm-4.0.4-e82d450244-e2c6023372.zip/node_modules/picomatch/",\
         "packageDependencies": [\
-          ["picomatch", "npm:2.3.1"]\
+          ["picomatch", "npm:4.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1365,14 +1325,11 @@ const RAW_RUNTIME_STATE =
           ["tinyexec", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["to-regex-range", [\
-      ["npm:5.0.1", {\
-        "packageLocation": "./.yarn/cache/to-regex-range-npm-5.0.1-f1e8263b00-487988b0a1.zip/node_modules/to-regex-range/",\
+      }],\
+      ["npm:1.0.4", {\
+        "packageLocation": "./.yarn/cache/tinyexec-npm-1.0.4-c1df9ff8b1-d4a5bbcf6b.zip/node_modules/tinyexec/",\
         "packageDependencies": [\
-          ["is-number", "npm:7.0.0"],\
-          ["to-regex-range", "npm:5.0.1"]\
+          ["tinyexec", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
