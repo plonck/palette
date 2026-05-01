@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.5.0"],\
-          ["@commitlint/config-conventional", "npm:20.5.0"],\
+          ["@commitlint/config-conventional", "npm:20.5.3"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
@@ -127,10 +127,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:20.5.0", {\
-        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.5.0-270861c198-3d5343243a.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:20.5.3", {\
+        "packageLocation": "./.yarn/cache/@commitlint-config-conventional-npm-20.5.3-f3f6a1ead8-75efad3f99.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:20.5.0"],\
+          ["@commitlint/config-conventional", "npm:20.5.3"],\
           ["@commitlint/types", "npm:20.5.0"],\
           ["conventional-changelog-conventionalcommits", "npm:9.3.1"]\
         ],\
@@ -352,7 +352,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.5.0"],\
-          ["@commitlint/config-conventional", "npm:20.5.0"],\
+          ["@commitlint/config-conventional", "npm:20.5.3"],\
           ["@plonck/palette", "workspace:."],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
