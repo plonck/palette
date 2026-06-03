@@ -34,7 +34,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
           ["prettier", "npm:3.8.1"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.9.7"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -56,56 +56,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@babel-helper-validator-identifier-npm-7.28.5-1953d49d2b-42aaebed91.zip/node_modules/@babel/helper-validator-identifier/",\
         "packageDependencies": [\
           ["@babel/helper-validator-identifier", "npm:7.28.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@chevrotain/cst-dts-gen", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/@chevrotain-cst-dts-gen-npm-11.0.3-1ac7b26815-9e945a0611.zip/node_modules/@chevrotain/cst-dts-gen/",\
-        "packageDependencies": [\
-          ["@chevrotain/cst-dts-gen", "npm:11.0.3"],\
-          ["@chevrotain/gast", "npm:11.0.3"],\
-          ["@chevrotain/types", "npm:11.0.3"],\
-          ["lodash-es", "npm:4.17.21"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@chevrotain/gast", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/@chevrotain-gast-npm-11.0.3-ae07e98aa6-54fc44d7b4.zip/node_modules/@chevrotain/gast/",\
-        "packageDependencies": [\
-          ["@chevrotain/gast", "npm:11.0.3"],\
-          ["@chevrotain/types", "npm:11.0.3"],\
-          ["lodash-es", "npm:4.17.21"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@chevrotain/regexp-to-ast", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/@chevrotain-regexp-to-ast-npm-11.0.3-0ca6c6ac3e-6939c5c94f.zip/node_modules/@chevrotain/regexp-to-ast/",\
-        "packageDependencies": [\
-          ["@chevrotain/regexp-to-ast", "npm:11.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@chevrotain/types", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/@chevrotain-types-npm-11.0.3-6044522d0c-72fe8f0010.zip/node_modules/@chevrotain/types/",\
-        "packageDependencies": [\
-          ["@chevrotain/types", "npm:11.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@chevrotain/utils", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/@chevrotain-utils-npm-11.0.3-856b0ac246-b31972d1b2.zip/node_modules/@chevrotain/utils/",\
-        "packageDependencies": [\
-          ["@chevrotain/utils", "npm:11.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -357,7 +307,7 @@ const RAW_RUNTIME_STATE =
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
           ["prettier", "npm:3.8.1"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.9.7"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -460,44 +410,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/callsites-npm-3.1.0-268f989910-fff9227740.zip/node_modules/callsites/",\
         "packageDependencies": [\
           ["callsites", "npm:3.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["chevrotain", [\
-      ["npm:11.0.3", {\
-        "packageLocation": "./.yarn/cache/chevrotain-npm-11.0.3-0664cabc35-ffd425fa32.zip/node_modules/chevrotain/",\
-        "packageDependencies": [\
-          ["@chevrotain/cst-dts-gen", "npm:11.0.3"],\
-          ["@chevrotain/gast", "npm:11.0.3"],\
-          ["@chevrotain/regexp-to-ast", "npm:11.0.3"],\
-          ["@chevrotain/types", "npm:11.0.3"],\
-          ["@chevrotain/utils", "npm:11.0.3"],\
-          ["chevrotain", "npm:11.0.3"],\
-          ["lodash-es", "npm:4.17.21"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["chevrotain-allstar", [\
-      ["npm:0.3.1", {\
-        "packageLocation": "./.yarn/cache/chevrotain-allstar-npm-0.3.1-c96818f339-5cadedffd3.zip/node_modules/chevrotain-allstar/",\
-        "packageDependencies": [\
-          ["chevrotain-allstar", "npm:0.3.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:e12c300b5887f1d11cc0a355d08af323480ffe09549d7c083d0650fb36c9ae3d423251d63aab642c9c2fcdff8460a18ea8280ded5e00a57d4bfd3dbdd961bcfb#npm:0.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/chevrotain-allstar-virtual-6cf661cec5/0/cache/chevrotain-allstar-npm-0.3.1-c96818f339-5cadedffd3.zip/node_modules/chevrotain-allstar/",\
-        "packageDependencies": [\
-          ["@types/chevrotain", null],\
-          ["chevrotain", "npm:11.0.3"],\
-          ["chevrotain-allstar", "virtual:e12c300b5887f1d11cc0a355d08af323480ffe09549d7c083d0650fb36c9ae3d423251d63aab642c9c2fcdff8460a18ea8280ded5e00a57d4bfd3dbdd961bcfb#npm:0.3.1"],\
-          ["lodash-es", "npm:4.17.21"]\
-        ],\
-        "packagePeers": [\
-          "@types/chevrotain",\
-          "chevrotain"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -880,18 +792,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["java-parser", [\
-      ["npm:3.0.1", {\
-        "packageLocation": "./.yarn/cache/java-parser-npm-3.0.1-e12c300b58-9b60f1132b.zip/node_modules/java-parser/",\
-        "packageDependencies": [\
-          ["chevrotain", "npm:11.0.3"],\
-          ["chevrotain-allstar", "virtual:e12c300b5887f1d11cc0a355d08af323480ffe09549d7c083d0650fb36c9ae3d423251d63aab642c9c2fcdff8460a18ea8280ded5e00a57d4bfd3dbdd961bcfb#npm:0.3.1"],\
-          ["java-parser", "npm:3.0.1"],\
-          ["lodash", "npm:4.17.21"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["jiti", [\
       ["npm:2.6.1", {\
         "packageLocation": "./.yarn/cache/jiti-npm-2.6.1-597ab7fb84-79b2e96a8e.zip/node_modules/jiti/",\
@@ -973,24 +873,6 @@ const RAW_RUNTIME_STATE =
           ["log-update", "npm:6.1.0"],\
           ["rfdc", "npm:1.4.1"],\
           ["wrap-ansi", "npm:9.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["lodash", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-d8cbea072b.zip/node_modules/lodash/",\
-        "packageDependencies": [\
-          ["lodash", "npm:4.17.21"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["lodash-es", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-fb407355f7.zip/node_modules/lodash-es/",\
-        "packageDependencies": [\
-          ["lodash-es", "npm:4.17.21"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1151,20 +1033,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier-plugin-java", [\
-      ["npm:2.8.1", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-bf79764f0c/node_modules/prettier-plugin-java/",\
+      ["npm:2.9.7", {\
+        "packageLocation": "./.yarn/cache/prettier-plugin-java-npm-2.9.7-b931f4ae62-2394746eb7.zip/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
-          ["prettier-plugin-java", "npm:2.8.1"]\
+          ["prettier-plugin-java", "npm:2.9.7"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1", {\
-        "packageLocation": "./.yarn/unplugged/prettier-plugin-java-virtual-bf79764f0c/node_modules/prettier-plugin-java/",\
+      ["virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.9.7", {\
+        "packageLocation": "./.yarn/__virtual__/prettier-plugin-java-virtual-b29520145e/0/cache/prettier-plugin-java-npm-2.9.7-b931f4ae62-2394746eb7.zip/node_modules/prettier-plugin-java/",\
         "packageDependencies": [\
           ["@types/prettier", null],\
-          ["java-parser", "npm:3.0.1"],\
           ["prettier", "npm:3.8.1"],\
-          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.8.1"]\
+          ["prettier-plugin-java", "virtual:b6f4dd5d0decb9736cd2f7998b3151ea7fda907d98bd6e6d7bdca178fb0cfac8db2e148bdf37129027486a74b8de2be03f31ffed5582ec134496652b119694d9#npm:2.9.7"],\
+          ["web-tree-sitter", "npm:0.26.9"]\
         ],\
         "packagePeers": [\
           "@types/prettier",\
@@ -1333,6 +1215,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/tinyexec-npm-1.0.4-c1df9ff8b1-d4a5bbcf6b.zip/node_modules/tinyexec/",\
         "packageDependencies": [\
           ["tinyexec", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["web-tree-sitter", [\
+      ["npm:0.26.9", {\
+        "packageLocation": "./.yarn/cache/web-tree-sitter-npm-0.26.9-6ee6f1f7d6-7df36536f6.zip/node_modules/web-tree-sitter/",\
+        "packageDependencies": [\
+          ["web-tree-sitter", "npm:0.26.9"]\
         ],\
         "linkType": "HARD"\
       }]\
